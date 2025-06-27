@@ -42,3 +42,32 @@ document.querySelector('.avatar-upload').addEventListener('change', e => {
         document.querySelector('.avatar-preview').src = imgUrl
     })
 })
+
+
+
+
+document.querySelector('.submit-btn').addEventListener('click', () => {
+    const desc = document.querySelector('.desc').value
+    const email = document.querySelector('.email').value
+    const gender = document.querySelector('.gender').value
+    const nickname = document.querySelector('.nickname').value
+    const creator = '飘'
+
+    const data = {
+        desc,
+        email,
+        gender,
+        nickname,
+        creator
+    }
+    console.log(data)
+
+    data.gender = +data.gender
+    console.log(data)
+
+    axios({
+        url: 'https://hmajax.itheima.net/api/settings',
+        method: 'put',
+        data: data
+    })
+})
