@@ -46,6 +46,7 @@ document.querySelector('.avatar-upload').addEventListener('change', e => {
 
 
 
+// 提交后显示提示框
 document.querySelector('.submit-btn').addEventListener('click', () => {
     const desc = document.querySelector('.desc').value
     const email = document.querySelector('.email').value
@@ -70,4 +71,13 @@ document.querySelector('.submit-btn').addEventListener('click', () => {
         method: 'put',
         data: data
     })
+
+    // 显示提示框
+    const alertBox = document.getElementById('successAlert');
+    alertBox.style.display = 'block';
+
+    // 若干秒后自动隐藏
+    setTimeout(() => {
+        alertBox.style.display = 'none';
+    }, 2000); // 2秒后隐藏
 })

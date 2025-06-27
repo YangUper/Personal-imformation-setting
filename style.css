@@ -151,3 +151,18 @@ body {
 .submit-btn {
     margin-top: 30px;
 }
+
+.alert {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #66b3e98a;
+    width: 150px;
+    height: 50px;
+    color: #1890ff;
+    border-radius: 5px;
+    text-align: center;         /* 水平居中 */
+    line-height: 50px;          /* 垂直居中，等于高度 */
+}
